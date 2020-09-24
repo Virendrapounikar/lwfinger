@@ -1,0 +1,20 @@
+import java.io.Console;
+
+class Operations{
+
+    public static void main(String[] args) {
+    
+        Console console = System.console();
+        int x, y;
+        System.out.println("Enter two No.s:");
+        x = Integer.parseInt(console.readLine());
+        y = Integer.parseInt(console.readLine());
+
+        System.out.println("Addition: " + (x+y));
+        System.out.println("Subtraction: " + (x-y));
+        System.out.println("Multiplication: " + (x*y));
+        System.out.println("Division: " + (x/y));
+
+    }
+
+}

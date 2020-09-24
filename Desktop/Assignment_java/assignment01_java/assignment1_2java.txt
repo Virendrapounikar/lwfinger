@@ -1,0 +1,64 @@
+class Checking{
+
+    public static void main(String[] args) {
+        
+        // int i = 9348.39
+        int i;
+        i = (int)9348.39;
+        System.out.println(i);
+        System.out.println("Int Min = " + Integer.MIN_VALUE + " Int Max = " + Integer.MAX_VALUE);
+
+        // long li = 100;
+        long li;
+        li = 100;
+        System.out.println(li);
+        System.out.println("Long Min = " + Long.MIN_VALUE + " Long Max = " + Long.MAX_VALUE);
+
+        // short s = 80999;
+        short s;
+        s = (short)80999;
+        System.out.println(s);
+        System.out.println("Short Min = " + Short.MIN_VALUE + " Short Max = " + Short.MAX_VALUE);
+
+        // long l = 2373467e18;
+        long l;
+        l = (long)2373467e18;
+        System.out.println(l);
+        System.out.println("Long Min = " + Long.MIN_VALUE + " Long Max = " + Long.MAX_VALUE);
+        
+        // byte b = 129;
+        byte b;
+        b = (byte)129;
+        System.out.println(b);
+        System.out.println("Byte Min = " + Byte.MIN_VALUE + " Byte Max = " + Byte.MAX_VALUE);
+        
+        // float f = 218.928;
+        float f;
+        f = (float)218.928;
+        System.out.println(f);
+        System.out.println("Float Min = " + Float.MIN_VALUE + " Float Max = " + Float.MAX_VALUE);
+        
+        // double d = 2930.3f;
+        double d;
+        d = 2930.3f;
+        System.out.println(d);
+        System.out.println("Double Min = " + Double.MIN_VALUE + " Double Max = " + Double.MAX_VALUE);
+        
+        // char c = -3;
+        char c;
+        c = (char)-3;
+        System.out.println(c);
+        System.out.println("Char Min = " + (int)Character.MIN_VALUE + " Char Max = " + (int)Character.MAX_VALUE);
+        
+        // boolean flag = 0;
+        int flag = 1;
+        boolean bool;
+        if(flag == 0)
+            bool = false;
+        else
+            bool = true;
+        System.out.println(bool);
+
+    }
+
+}

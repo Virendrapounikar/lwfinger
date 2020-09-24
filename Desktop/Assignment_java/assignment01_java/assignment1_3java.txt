@@ -1,0 +1,143 @@
+import java.io.Console;
+
+class Numbers{
+
+    static void sumDigits(int num){     // 153
+
+        int temp = num;
+        int rem, res = 0;
+        while(temp > 0){        //153, 15, 1, 0
+            rem = temp % 10;    //3, 5, 1
+            res = res + rem;    //3, 8, 9
+            temp = temp / 10;   //15, 1, 0
+        }
+        System.out.println("Sum of Digits of " + num + " is " + res);
+    }
+
+    static void reverseNo(int num){
+
+        int temp = num;
+        int rem, res = 0;
+
+	    while(temp > 0){
+		    rem = temp % 10;
+            res = res * 10 + rem;
+		    temp = temp / 10;
+	    }
+
+	    System.out.println("Reverse of " + num + " is " + res);
+    }
+
+    static void palindromeNo(int num){
+        
+        int temp = num;
+        int rem, res = 0;
+
+	    while(temp > 0){
+		    rem = temp % 10;
+            res = res * 10 + rem;
+		    temp = temp / 10;
+	    }
+
+        if(res == num)
+            System.out.println(num + " is Palindrome");
+        else
+            System.out.println(num + " is not Palindrome");
+    }
+
+    static void perfectNo(int num){
+
+        int temp = num;
+        int res = 0;
+
+        for(int i=1; i<=num/2; i++){
+            if(temp % i == 0)
+                res = res + i;
+        }
+        if(res == num)
+            System.out.println(num + " is Perfect No");
+        else
+            System.out.println(num + " is not Perfect No");
+    }
+
+    static void strongNo(int num){
+
+        int temp = num;
+        int rem, res = 0;
+        while(temp > 0){
+            rem = temp % 10;
+            int no = fact(rem);
+            res = res + no;
+            temp = temp / 10;
+        }
+        if(res == num)
+            System.out.println(num + " is Strong No");
+        else
+            System.out.println(num + " is not Strong No");
+
+    }
+
+    static int fact(int rem){
+
+        int factorial = 1;
+        while(rem > 0){
+            factorial = factorial * rem;
+            rem = rem - 1;
+        }
+        return factorial;
+    }
+
+    static void armstrongNo(int num){
+
+        int temp = num;
+        int rem, res = 0;
+
+        while(temp > 0){
+		    rem = temp % 10;
+		    res = res + rem * rem * rem;
+		    temp = temp / 10;
+	    }
+
+	    if(num == res)
+		    System.out.println(num + " is an Armstrong No.");
+	    else
+            System.out.println(num + " is not an Armstrong No.");
+        
+    }
+
+    void primeNo(int num){
+
+        int flag = 1;
+
+        for(int i=2; i<=num/2; i++){
+            if(num % i == 0){
+                flag = 0;
+                break;
+            }
+        }
+
+        if(flag == 1)
+		    System.out.println(num + " is Prime No.");
+	    else
+            System.out.println(num + " is not Prime No.");
+        
+    }
+
+    public static void main(String[] args) {
+        
+        Numbers n = new Numbers();
+        Console console = System.console();
+        int num;
+        System.out.println("Enter Number:");
+        num = Integer.parseInt(console.readLine());
+
+        sumDigits(num);
+        reverseNo(num);
+        palindromeNo(num);
+        perfectNo(num);
+        strongNo(num);
+        armstrongNo(num);
+        n.primeNo(num);
+
+    }
+}
